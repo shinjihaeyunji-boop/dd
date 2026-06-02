@@ -549,6 +549,7 @@ body.dark-mode .nav-item:hover {
     padding: 20px 0;
     box-shadow: 0 15px 30px rgba(0,0,0,0.08);
     position: absolute;
+    top: 100%;
     width: 100%;
     left: 0;
     z-index: 999;
