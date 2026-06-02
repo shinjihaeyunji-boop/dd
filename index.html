@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page-title">양구군 보건소 | 식품영업신고 원스톱 지원센터</title>
+    <meta name="description" content="양구군 식품접객업(일반음식점, 휴게음식점) 및 식품제조업(즉석판매제조가공업, 식품제조가공업) 영업신고와 영업등록에 필요한 서류 및 절차를 친절하고 정확하게 안내해 드립니다.">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Skip Navigation -->
+    <div id="skip-nav">
+        <a href="#main-content" data-i18n="skip-nav-text">본문 바로가기</a>
+    </div>
+
+    <!-- Top Utility Bar -->
+    <div class="utility-bar">
+        <div class="container utility-container">
+            <div class="utility-links-left">
+                <a href="https://www.yanggu.go.kr/" target="_blank" rel="noopener noreferrer" data-i18n="gov-home">양구군청 바로가기</a>
+                <span class="divider">|</span>
+                <a href="#" class="mock-link" data-i18n="online-minwon">온라인 민원창구</a>
+            </div>
+            <div class="utility-links-right">
+                <button id="lang-toggle-btn" class="mock-link" style="font-weight:700; color:white;">English</button>
+                <button class="theme-toggle" id="theme-toggle-btn" aria-label="다크 모드 전환">
+                    <svg class="sun-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-area" aria-label="양구군보건소 식품영업신고 원스톱 지원센터 홈">
+                <div class="logo-icon">
+                    <!-- Yanggu styled pristine clean DMZ mountain and nature badge -->
+                    <svg viewBox="0 0 100 100" class="svg-logo">
+                        <path d="M50 15 C20 15, 10 30, 10 60 C10 80, 30 85, 50 85 C70 85, 90 80, 90 60 C90 30, 80 15, 50 15 Z" fill="#006c35"/>
+                        <polygon points="25,65 50,30 75,65" fill="#00b08b"/>
+                        <polygon points="40,65 60,40 80,65" fill="#8bc34a"/>
+                        <path d="M10 65 Q 30 75, 50 65 T 90 65" fill="none" stroke="#e0f2fe" stroke-width="4"/>
+                        <circle cx="50" cy="28" r="6" fill="#ffb300"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <h1 data-i18n="logo-title">양구군보건소</h1>
+                    <span class="sub-brand" data-i18n="logo-subtitle">식품영업신고 원스톱 지원센터</span>
+                </div>
+            </a>
+
+            <nav class="main-nav" aria-label="주 메뉴">
+                <ul class="nav-list">
+                    <li><a href="#diagnostic" class="nav-item" data-i18n="menu-wizard">맞춤형 자가진단</a></li>
+                    <li><a href="#tab-guide-section" class="nav-item" data-i18n="menu-guide">업종별 상세가이드</a></li>
+                    <li><a href="#roadmap" class="nav-item" data-i18n="menu-roadmap">신고 로드맵</a></li>
+                    <li><a href="#downloads" class="nav-item" data-i18n="menu-downloads">서식 자료실</a></li>
+                    <li><a href="#faq" class="nav-item" data-i18n="menu-faq">자주 묻는 질문</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-search">
+                <div class="search-box">
+                    <input type="text" id="header-search-input" placeholder="서류 또는 키워드 입력" aria-label="사이트 검색" data-i18n-placeholder="search-placeholder">
+                    <button class="search-btn" id="header-search-btn" aria-label="검색 실행">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    </button>
+                </div>
+            </div>
+            
+            <button class="mobile-menu-btn" id="menu-toggle-btn" aria-label="전체메뉴 열기">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div class="mobile-nav-panel" id="mobile-nav-panel">
+        <ul class="mobile-nav-list">
+            <li><a href="#diagnostic" class="mobile-nav-item" data-i18n="menu-wizard">맞춤형 자가진단</a></li>
+            <li><a href="#tab-guide-section" class="mobile-nav-item" data-i18n="menu-guide">업종별 상세가이드</a></li>
+            <li><a href="#roadmap" class="mobile-nav-item" data-i18n="menu-roadmap">신고 로드맵</a></li>
+            <li><a href="#downloads" class="mobile-nav-item" data-i18n="menu-downloads">서식 자료실</a></li>
+            <li><a href="#faq" class="mobile-nav-item" data-i18n="menu-faq">자주 묻는 질문</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content Area -->
+    <main id="main-content">
+
+        <!-- Hero & Banner Slider Area -->
+        <section class="hero-section">
+            <div class="hero-bg-overlay"></div>
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="hero-tag" data-i18n="hero-tag">양구군 민원 지원 솔루션</span>
+                    <h2 data-i18n="hero-title">양구에서 식품 창업을<br>준비하시나요?</h2>
+                    <p class="hero-desc" data-i18n="hero-desc">즉석판매제조가공업, 일반음식점, 휴게음식점, 식품제조가공업 영업신고 및 등록에 필요한 서류와 복잡한 요건을 군민의 눈높이에서 한눈에 보여드립니다.</p>
+                    <div class="hero-actions">
+                        <a href="#diagnostic" class="btn btn-primary btn-lg" data-i18n="hero-btn-wizard">내게 맞는 서류 진단하기</a>
+                        <a href="#tab-guide-section" class="btn btn-secondary btn-lg" data-i18n="hero-btn-guide">업종별 가이드 보기</a>
+                    </div>
+                </div>
+                <div class="hero-banner-slider">
+                    <div class="slider-container" id="notice-slider">
+                        <!-- Banner 1 -->
+                        <div class="slide active">
+                            <div class="slide-card">
+                                <span class="slide-tag green" data-i18n="slide1-tag">알림존</span>
+                                <h3 data-i18n="slide1-title">보건소 위생교육 수료 안내</h3>
+                                <p data-i18n="slide1-desc">양구군에서 영업신고 전 위생교육 사전 이수는 필수 의무사항입니다. 각 업종별 법정 위생교육 기관을 확인하고 미리 수료증을 준비하세요.</p>
+                                <a href="#roadmap" class="slide-link" data-i18n="slide-details">자세히 보기 &rarr;</a>
+                            </div>
+                        </div>
+                        <!-- Banner 2 -->
+                        <div class="slide">
+                            <div class="slide-card">
+                                <span class="slide-tag orange" data-i18n="slide2-tag">군정소식</span>
+                                <h3 data-i18n="slide2-title">양구 맛집 위생등급제 지원</h3>
+                                <p data-i18n="slide2-desc">양구군 보건소는 군민 및 양구를 찾으시는 외지 관광객분들께 안전한 식문화를 제공하고자, 위생점검 사전 지도 및 식중독 예방 사업을 추진 중입니다.</p>
+                                <a href="#faq" class="slide-link" data-i18n="slide-details">자세히 보기 &rarr;</a>
+                            </div>
+                        </div>
+                        <!-- Banner 3 -->
+                        <div class="slide">
+                            <div class="slide-card">
+                                <span class="slide-tag teal" data-i18n="slide3-tag">인허가 중요</span>
+                                <h3 data-i18n="slide3-title">상가 계약 전 용도 확인 필수</h3>
+                                <p data-i18n="slide3-desc">부동산 가계약 이전에 해당 점포가 식품영업이 가능한 건축물대장상 용도(근린생활시설 등)인지 반드시 양구군 보건소 위생계에 사전 확인하세요!</p>
+                                <a href="#tab-guide-section" class="slide-link" data-i18n="slide-details">자세히 보기 &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <button class="slide-control-prev" id="slide-prev-btn" aria-label="이전 배너">&lt;</button>
+                        <div class="slider-dots" id="slider-dots-container">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <button class="slide-control-next" id="slide-next-btn" aria-label="다음 배너">&gt;</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fast Stats/Status Counter Section -->
+        <section class="quick-info-section">
+            <div class="container quick-info-grid">
+                <div class="info-card">
+                    <div class="info-icon pink">
+                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    </div>
+                    <div class="info-text">
+                        <h4 data-i18n="quick1-title">준비 서류 일괄 안내</h4>
+                        <p data-i18n="quick1-desc">상세 설명 팝업 연결 지원</p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon green">
+                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    </div>
+                    <div class="info-text">
+                        <h4 data-i18n="quick2-title">평균 민원 처리 시간</h4>
+                        <p data-i18n="quick2-desc">접수 완료 후 당일(3시간 이내)</p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon blue">
+                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                    </div>
+                    <div class="info-text">
+                        <h4 data-i18n="quick3-title">보건증 간편 발급</h4>
+                        <p data-i18n="quick3-desc">양구군 보건소 검진 접수</p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon orange">
+                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    </div>
+                    <div class="info-text">
+                        <h4 data-i18n="quick4-title">보건소 위생팀 상담</h4>
+                        <p data-i18n="quick4-desc">민원 핫라인 033-480-2830</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 1: Interactive Self-Diagnostic Wizard -->
+        <section id="diagnostic" class="diagnostic-section scroll-offset">
+            <div class="container">
+                <div class="section-title-area">
+                    <span class="section-subtitle" data-i18n="wiz-section-subtitle">SMART WIZARD</span>
+                    <h3 class="section-title" data-i18n="wiz-section-title">식품영업인허가 맞춤형 자가진단</h3>
+                    <p class="section-desc" data-i18n="wiz-section-desc">간단한 질문에 답변하시면 해당 업종 판정과 양구군청 제출에 필요한 서류 체크리스트를 동적으로 확인하실 수 있습니다.</p>
+                </div>
+
+                <div class="wizard-card-wrapper">
+                    <!-- Wizard Progress Header -->
+                    <div class="wizard-progress">
+                        <div class="progress-bar-track">
+                            <div class="progress-bar-fill" id="wizard-progress-bar"></div>
+                        </div>
+                        <div class="progress-steps">
+                            <div class="prog-step active" data-step="1">1<span class="step-label" data-i18n="wiz-prog1">업종 분류</span></div>
+                            <div class="prog-step" data-step="2">2<span class="step-label" data-i18n="wiz-prog2">시설 파악</span></div>
+                            <div class="prog-step" data-step="3">3<span class="step-label" data-i18n="wiz-prog3">세부 옵션</span></div>
+                            <div class="prog-step" data-step="result">결과<span class="step-label" data-i18n="wiz-prog4">결과 진단서</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Wizard Question Area -->
+                    <div class="wizard-question-content" id="wizard-content-box">
+                        
+                        <!-- Step 1: Core business selection -->
+                        <div class="wizard-step-pane active" id="step-pane-1">
+                            <h4 class="pane-question" data-i18n="wiz-q1">Q1. 하시고자 하는 식품 비즈니스의 주요 형태는 무엇인가요?</h4>
+                            <p class="pane-hint" data-i18n="wiz-hint1">가장 부합하는 카드를 하나 선택해 주세요.</p>
+                            
+                            <div class="option-card-grid">
+                                <!-- Option A -->
+                                <button class="option-card" data-step="1" data-val="restaurant">
+                                    <div class="opt-badge blue" data-i18n="badge-service">식품접객업</div>
+                                    <div class="opt-icon">
+                                        <svg viewBox="0 0 24 24" width="36" height="36" stroke="currentColor" stroke-width="2" fill="none"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                                    </div>
+                                    <h5 data-i18n="wiz-opt1a-title">조리 음식 판매 및 주류 매장</h5>
+                                    <p data-i18n="wiz-opt1a-desc">매장에서 직접 조리한 음식을 서빙하여 손님이 드실 수 있게 하고, 소주/맥주 등 주류 판매도 필요합니다. (일반식당, 고깃집, 일식집 등)</p>
+                                </button>
+                                <!-- Option B -->
+                                <button class="option-card" data-step="1" data-val="cafe">
+                                    <div class="opt-badge teal" data-i18n="badge-service">식품접객업</div>
+                                    <div class="opt-icon">
+                                        <svg viewBox="0 0 24 24" width="36" height="36" stroke="currentColor" stroke-width="2" fill="none"><path d="M18 8h1a4 4 0 0 1 8 0v1a4 4 0 0 1-4 4h-5M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+                                    </div>
+                                    <h5 data-i18n="wiz-opt1b-title">음료, 제과 위주 및 주류 판매 없음</h5>
+                                    <p data-i18n="wiz-opt1b-desc">커피, 전통차, 디저트, 빵, 아이스크림 등을 전문으로 판매하며, 매장 내 주류 판매나 안주 제공은 불가능합니다. (카페, 베이커리, 주스숍 등)</p>
+                                </button>
+                                <!-- Option C -->
+                                <button class="option-card" data-step="1" data-val="instant">
+                                    <div class="opt-badge green" data-i18n="badge-mfg">식품제조업</div>
+                                    <div class="opt-icon">
+                                        <svg viewBox="0 0 24 24" width="36" height="36" stroke="currentColor" stroke-width="2" fill="none"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+                                    </div>
+                                    <h5 data-i18n="wiz-opt1c-title">직접 제조/가공하여 소비자 대상 판매</h5>
+                                    <p data-i18n="wiz-opt1c-desc">매장 내 작업장에서 반찬, 떡, 한과, 밀키트 등을 직접 조리해 오프라인 매장 혹은 배송/택배(온라인)로 최종 손님에게 직접 판매합니다. (반찬가게, 수제잼, 떡집 등)</p>
+                                </button>
+                                <!-- Option D -->
+                                <button class="option-card" data-step="1" data-val="factory">
+                                    <div class="opt-badge orange" data-i18n="badge-mfg">식품제조업</div>
+                                    <div class="opt-icon">
+                                        <svg viewBox="0 0 24 24" width="36" height="36" stroke="currentColor" stroke-width="2" fill="none"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+                                    </div>
+                                    <h5 data-i18n="wiz-opt1d-title">대량 생산 및 유통/마트 등 B2B 납품</h5>
+                                    <p data-i18n="wiz-opt1d-desc">전문 공장이나 제조업소 설비를 갖춰 대량으로 식품을 생산하고, 타 마트나 온라인 도매처, 소매업체 등에 납품하여 유통시키고자 합니다. (식품 제조 공장)</p>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Location/Safety/Zoning questions (Dynamic based on Step 1) -->
+                        <div class="wizard-step-pane" id="step-pane-2">
+                            <h4 class="pane-question" id="step2-question-title">Q2. 매장의 건축물 층수와 면적은 어떻게 되시나요?</h4>
+                            <p class="pane-hint" id="step2-question-hint">안전시설 소방 증명 여부를 가리기 위해 층수와 대략적인 면적을 확인합니다.</p>
+                            
+                            <div class="option-card-grid" id="step2-options-container">
+                                <!-- Dynamic options injected by JS -->
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Gas & Water usage options -->
+                        <div class="wizard-step-pane" id="step-pane-3">
+                            <h4 class="pane-question" data-i18n="wiz-q3">Q3. 비즈니스 시설에 사용 예정인 인프라 세부 사양은 어떻게 되나요?</h4>
+                            <p class="pane-hint" data-i18n="wiz-hint3">중요한 세 가지 설비/보험 여부를 체크해 주세요. (해당되는 것 모두 선택)</p>
+                            
+                            <div class="checkbox-option-wrapper">
+                                <label class="checkbox-card-btn" for="chk-lpg">
+                                    <input type="checkbox" id="chk-lpg" value="lpg">
+                                    <span class="chk-custom-box"></span>
+                                    <div class="chk-card-content">
+                                        <h5 data-i18n="wiz-chk3a-title">액화석유가스(LPG) 조리 연료 사용</h5>
+                                        <p data-i18n="wiz-chk3a-desc">도시가스(LNG) 배관망을 쓰지 않고 회색 가스통(LPG)을 설치해 주방 화구용 연료로 사용합니다. (LPG 사용 완성검사필증 필수 대상)</p>
+                                    </div>
+                                </label>
+                                
+                                <label class="checkbox-card-btn" for="chk-underground">
+                                    <input type="checkbox" id="chk-underground" value="underground">
+                                    <span class="chk-custom-box"></span>
+                                    <div class="chk-card-content">
+                                        <h5 data-i18n="wiz-chk3b-title">상수도 대신 지하수(우물) 공급수 사용</h5>
+                                        <p data-i18n="wiz-chk3b-desc">시 외곽 지역 등 수돗물이 들어오지 않아 지하수를 영업장 조리수 및 식수로 사용합니다. (지하수 수질검사성적서 필수 대상)</p>
+                                    </div>
+                                </label>
+
+                                <label class="checkbox-card-btn" for="chk-insurance">
+                                    <input type="checkbox" id="chk-insurance" value="insurance">
+                                    <span class="chk-custom-box"></span>
+                                    <div class="chk-card-content">
+                                        <h5 data-i18n="wiz-chk3c-title">1층 바닥 면적이 100㎡(약 30평) 이상</h5>
+                                        <p data-i18n="wiz-chk3c-desc">1층에 입점하는 요식업 중 바닥 실평수 면적이 100㎡ 이상인 업장입니다. (재난배상책임보험 의무 가입)</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Result Step: Customized document list -->
+                        <div class="wizard-step-pane" id="step-pane-result">
+                            <div class="result-success-header">
+                                <div class="success-icon-badge">
+                                    <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="2.5" fill="none" class="success-check-svg"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                </div>
+                                <h4 class="result-headline" data-i18n="result-head">진단이 성공적으로 완료되었습니다!</h4>
+                                <div class="result-business-tag" id="result-business-type-name">일반음식점 영업신고</div>
+                            </div>
+                            
+                            <div class="result-details-grid">
+                                <div class="result-checklist-section">
+                                    <h5 data-i18n="result-list-title">📋 나만을 위한 영업신고 필수 서류 체크리스트</h5>
+                                    <p class="section-notice-txt" data-i18n="result-list-notice">* 각 서류명을 클릭하시거나 [상세보기] 버튼을 누르시면 준비요령 팝업이 뜹니다.</p>
+                                    <ul class="result-doc-list" id="result-document-list">
+                                        <!-- Rendered by JS -->
+                                    </ul>
+                                </div>
+                                
+                                <div class="result-zoning-section">
+                                    <h5 data-i18n="result-zoning-title">🏢 건축물대장 용도 확인 사항</h5>
+                                    <div class="zoning-alert-card">
+                                        <p class="zoning-main" id="result-zoning-main-text">제2종 근린생활시설 (일반음식점)</p>
+                                        <p class="zoning-sub" id="result-zoning-sub-text">건축물대장상 무단증축 부분(위반건축물)이 있는 경우, 영업 신고 발급이 불가할 수 있으니 보건소 위생계에 사전 조회가 절대적으로 필요합니다.</p>
+                                    </div>
+                                    
+                                    <div class="fee-guide-card">
+                                        <h5 data-i18n="result-fee-title">관련 비용 및 처리기간 안내</h5>
+                                        <table class="result-table">
+                                            <tr>
+                                                <th data-i18n="result-col-period">처리 기간</th>
+                                                <td id="result-period">즉시 (접수 후 3시간 이내)</td>
+                                            </tr>
+                                            <tr>
+                                                <th data-i18n="result-col-fee">신고 수수료</th>
+                                                <td data-i18n="result-val-fee">28,000원</td>
+                                            </tr>
+                                            <tr>
+                                                <th data-i18n="result-col-tax">등록면허세</th>
+                                                <td data-i18n="result-val-tax">면적에 따라 차등 부과 (약 18,000원 ~ 67,500원)</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="result-action-panel">
+                                <button class="btn btn-secondary" id="wizard-reset-btn" data-i18n="result-btn-reset">다시 자가진단하기</button>
+                                <button class="btn btn-primary" id="wizard-print-btn" data-i18n="result-btn-print">진단 결과 프린트 / 저장</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Wizard Button Controls -->
+                    <div class="wizard-buttons" id="wizard-nav-btns">
+                        <button class="btn btn-secondary" id="wizard-prev-btn" disabled data-i18n="wiz-btn-prev">이전 단계</button>
+                        <button class="btn btn-primary" id="wizard-next-btn" data-i18n="wiz-btn-next">다음 단계 &rarr;</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Tabbed Detailed Guide (업종별 상세 가이드) -->
+        <section id="tab-guide-section" class="tab-guide-section scroll-offset">
+            <div class="container">
+                <div class="section-title-area">
+                    <span class="section-subtitle" data-i18n="guide-subtitle">DETAILED GUIDE</span>
+                    <h3 class="section-title" data-i18n="guide-title">업종별 영업인허가 기준 상세 안내</h3>
+                    <p class="section-desc" data-i18n="guide-desc">업종 카드를 클릭하시고 서류들의 [상세 정보] 버튼을 통해 발급 처리를 구체적으로 알아보세요.</p>
+                </div>
+
+                <!-- Tab Buttons -->
+                <div class="tab-buttons-container">
+                    <button class="tab-btn active" data-tab="general">
+                        <span class="tab-title" data-i18n="tab1-title">일반음식점</span>
+                        <span class="tab-sub" data-i18n="tab1-sub">식사 및 주류 판매 요식업</span>
+                    </button>
+                    <button class="tab-btn" data-tab="rest">
+                        <span class="tab-title" data-i18n="tab2-title">휴게음식점</span>
+                        <span class="tab-sub" data-i18n="tab2-sub">카페, 제과점, 분식점</span>
+                    </button>
+                    <button class="tab-btn" data-tab="instant-store">
+                        <span class="tab-title" data-i18n="tab3-title">즉석판매제조가공업</span>
+                        <span class="tab-sub" data-i18n="tab3-sub">반찬가게, 떡집, 직접 소매</span>
+                    </button>
+                    <button class="tab-btn" data-tab="factory-store">
+                        <span class="tab-title" data-i18n="tab4-title">식품제조가공업</span>
+                        <span class="tab-sub" data-i18n="tab4-sub">B2B 대량 유통 및 공장</span>
+                    </button>
+                </div>
+
+                <!-- Tab Display Panel Wrapper -->
+                <div class="tab-panel-container">
+                    
+                    <!-- Tab Panel: 일반음식점 -->
+                    <div class="tab-panel active" id="panel-general">
+                        <div class="panel-header-desc">
+                            <h4 data-i18n="tab1-panel-title">식사 조리와 함께 주류 판매가 허용되는 대표적인 식품접객업종입니다.</h4>
+                            <p data-i18n="tab1-panel-desc">식사 조리 판매와 소주, 맥주, 막걸리 등 반주 형태의 술 판매가 허용됩니다. 삼겹살전문점, 이자카야, 호프집, 일반 한식당 등이 해당됩니다. (서류명을 누르면 상세 발급안내가 뜹니다.)</p>
+                        </div>
+                        
+                        <div class="panel-content-grid">
+                            <div class="panel-docs-box">
+                                <h5 data-i18n="tab-docs-title">필요 구비서류 체크리스트</h5>
+                                <div class="doc-card-stack">
+                                    <div class="doc-card-mini clickable-doc-trigger" data-docname="식품영업신고서">
+                                        <div class="doc-chk-check">&#10003;</div>
+                                        <div class="doc-meta-wrap">
+                                            <h6><span data-i18n="doc-item-report">식품영업신고서</span> <button class="btn-text-action" data-i18n="btn-detail">[상세안내]</button></h6>
+                                            <p data-i18n="doc-item-report-desc">보건소 민원실 비치 서식 (민원 수수료: 28,000원)</p>
+                                        </div>
+                                    </div>
+                                    <div class="doc-card-mini clickable-doc-trigger" data-docname="건강진단결과서 (구 보건증)">
+                                        <div class="doc-chk-check">&#10003;</div>
+                                        <div class="doc-meta-wrap">
+                                            <h6><span data-i18n="doc-item-health">건강진단결과서 (구 보건증)</span> <button class="btn-text-action" data-i18n="btn-detail">[상세안내]</button></h6>
+                                            <p data-i18n="doc-item-health-desc">종사자 및 대표자 필수 검사. 장티푸스, 폐결핵 검증용 (5영업일 소요)</p>
+                                        </div>
+                                    </div>
+                                    <div class="doc-card-mini clickable-doc-trigger" data-docname="위생교육수료증">
+                                        <div class="doc-chk-check">&#10003;</div>
+                                        <div class="doc-meta-wrap">
+                                            <h6><span data-i18n="doc-item-hygiene">위생교육수료증</span> <button class="btn-text-action" data-i18n="btn-detail">[상세안내]</button></h6>
+                                            <p data-i18n="doc-item-hygiene-desc-general"><strong>한국외식업중앙회</strong> 온라인 사전 위생교육 이수 필수</p>
+                                        </div>
+                                    </div>
+                                    <div class="doc-card-mini clickable-doc-trigger" data-docname="임대차계약서 사본">
+                                        <div class="doc-chk-check">&#10003;</div>
+                                        <div class="doc-meta-wrap">
+                                            <h6><span data-i18n="doc-item-lease">부동산 임대차계약서</span> <button class="btn-text-action" data-i18n="btn-detail">[상세안내]</button></h6>
+                                            <p data-i18n="doc-item-lease-desc">영업주의 명의로 확보된 상가 점포 임대 계약 서류</p>
+                                        </div>
+                                    </div>
+                                    <div class="doc-card-mini clickable-doc-trigger conditional" data-docname="안전시설등 완비증명서 (소방필증)">
+                                        <div class="doc-chk-check font-orange">&#9888;</div>
+                                        <div class="doc-meta-wrap">
+                                            <h6><span data-i18n="doc-item-fire">안전시설등 완비증명서 (소방필증)</span> <span class="tag-cond" data-i18n="tag-cond">조건부</span> <button class="btn-text-action" data-i18n="btn-detail">[상세안내]</button></h6>
+                                            <p data-i18n="doc-item-fire-desc">지하 66㎡ 이상 또는 지상 2층 이상 100㎡ 이상 영업장 해당 (양구소방서 발행)</p>
+                                        </div>
+                                    </div>
+                                    <div class="doc-card-mini clickable-doc-trigger conditional" data-docname="LPG 가스시설 사용 완성검사필증">
+                                        <div class="doc-chk-check font-orange">&#9888;</div>
+                                        <div class="doc-meta-wrap">
+                                            <h6><span data-i18n="doc-item-lpg">LPG 완성검사필증</span> <span class="tag-cond" data-i18n="tag-cond">조건부</span> <button class="btn-text-action" data-i18n="btn-detail">[상세안내]</button></h6>
+                                            <p data-i18n="doc-item-lpg-desc">액화석유가스(LPG) 가스통 연료 배관 적용 시 (가스안전공사 합격증)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel-zoning-box">
+                                <h5 data-i18n="tab-zoning-title">일반음식점 시설 및 조닝 허가 기준</h5>
+                                <ul class="zoning-points">
+                                    <li data-i18n="tab-zoning-p1"><strong>건축물대장 용도:</strong> <strong>제2종 근린생활시설(일반음식점)</strong>이 기본입니다. 다른 경우 기재사항 변경이나 표시 변경 절차가 수반됩니다.</li>
+                                    <li data-i18n="tab-zoning-p2"><strong>위반건축물 조회:</strong> 무단 외장 천막 확장이나 불법 테라스 시공 등이 등재되어 있으면, 시정이 완료되기 전까지는 신규 영업신고가 원천 반려됩니다.</li>
+                                    <li data-i18n="tab-zoning-p3"><strong>정화조 용량:</strong> 양구읍내 상가건물의 정화조 총 처리용량을 요식업 오수 기준량으로 초과하는지 여부를 보건소 위생팀에서 사전 연동 검토해야 합니다.</li>
+                                </ul>
+                                
+                                <div class="callout-card">
+                                    <h6 data-i18n="tab-tip-title">💡 양구군 위생업무 실무 팁</h6>
+                                    <p data-i18n="tab-tip-desc">"이전 식당 사장님이 운영하던 매장을 그대로 인수하는 상황이라면, 폐업 후 신규 등록을 하지 마시고 **영업자 지위승계**를 이용해 보세요. 기존 소방 완비증명서가 자동으로 승계되어 비용과 소방서 서류 절차가 생략됩니다."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab Panel: 휴게음식점 -->
+                    <div class="tab-panel" id="panel-rest">
+                        <div class="panel-header-desc">
+                            <h4 data-i18n="tab2-panel-title">커피, 차, 과자, 빵류 등을 판매하고 매장 내 주류 음주가 엄금된 요식업종입니다.</h4>
+                            <p data-i18n="tab2-panel-desc">주류 일체 판매 불가 및 안주 취급 금지가 특징입니다. 커피전문점, 베이커리, 디저트 카페, 분식점, 패스트푸드점이 포함됩니다.</p>
+                        </div>
+                        
+                        <div class="panel-content-grid">
+                            <div class="panel-docs-box">
+                                <h5 data-i18n="tab-docs-title">필요 구비서류 체크리스트</h5>
+                                <div class="doc-card-stack">
+                                    <div class="doc-card-mini clickable-doc-trigger" data-docname="식품영업신고서">
+                                        <div class="doc-chk-check">&#10003;</div>
+                                        <div class="doc-meta-wrap">
+                                            <h6><span data-i18n="doc-item-report">식품영업신고서</span> <button class="btn-text-action" data-i18n="btn-detail">[상세안내]</button></h6>
+                                            <p data-i18n="doc-item-report-desc">보건소 민원실 비치 표준 신청양식 (수수료: 28,000원)</p>
+                                        </div>
+                                    </div>
+                                    <div class="doc-card-mini clickable-doc-trigger" data-docname="건강진단결과서 (구 보건증)">
+                                        <div class="doc-chk-check">&#10003;</div>
+                                        <div class="doc-meta-wrap">
+                                            <h6><span data-i18n="doc-item-health">건강진단결과서 (구 보건증)</span> <button class="btn-text-action" data-i18n="btn-detail">[상세안내]</button></h6>
+                                            <p data-i18n="doc-item-health-desc">식품위생 의무 검진 증명서. 흉부X선 및 장티푸스 분변 검사</p>
+                                        </div>
+                                    </div>
+                                    <div class="doc-card-mini clickable-doc-trigger" data-docname="위생교육수료증">
+                                        <div class="doc-chk-check">&#10003;</div>
+                                        <div class="doc-meta-wrap">
+                                            <h6><span data-i18n="doc-item-hygiene">위생교육수료증</span> <button class="btn-text-action" data-i18n="btn-detail">[상세안내]</button></h6>
+                                            <p data-i18n="doc-item-hygiene-desc-rest"><strong>한국휴게음식업중앙회</strong> 또는 한국외식업중앙회 신규 위생교육 이수</p>
+                                        </div>
+                                    </div>
+                                    <div class="doc-card-mini clickable-doc-trigger" data-docname="임대차계약서 사본">
+                                        <div class="doc-chk-check">&#10003;</div>
+                                        <div class="doc-meta-wrap">
+                                            <h6><span data-i18n="doc-item-lease">부동산 임대차계약서</span> <button class="btn-text-action" data-i18n="btn-detail">[상세안내]</button></h6>
+                                            <p data-i18n="doc-item-lease-desc">상가 점포 계약서 본인 명의 계약 상태 확인</p>
+                                        </div>
+                                    </div>
+                                    <div class="doc-card-mini clickable-doc-trigger conditional" data-docname="안전시설등 완비증명서 (소방필증)">
+                                        <div class="doc-chk-check font-orange">&#9888;</div>
+                                        <div class="doc-meta-wrap">
+                                            <h6><span data-i18n="doc-item-fire">안전시설등 완비증명서 (소방필증)</span> <span class="tag-cond" data-i18n="tag-cond">조건부</span> <button class="btn-text-action" data-i18n="btn-detail">[상세안내]</button></h6>
+                                            <p data-i18n="doc-item-fire-desc">지하 66㎡ 이상 또는 지상 2층 이상 100㎡ 이상 매장 조건부 필수</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel-zoning-box">
+                                <h5 data-i18n="tab-zoning-title">휴게음식점 시설 및 조닝 허가 기준</h5>
+                                <ul class="zoning-points">
+                                    <li data-i18n="tab2-zoning-p1"><strong>건축물대장 용도:</strong> <strong>제1종 또는 제2종 근린생활시설(휴게음식점)</strong>에서 적법 승인됩니다.</li>
+                                    <li data-i18n="tab2-zoning-p2"><strong>무인 판매점/무인 카페 주의:</strong> 상주 근로자 없이 키오스크 기계로 가동되는 무인 밀키트 판매기, 로봇 커피 자판기 매장도 기계를 통한 휴게음식점 영업신고 필증을 부착해야 위반 처벌을 피합니다.</li>
+                                    <li data-i18n="tab2-zoning-p3"><strong>지하수 수질성적서:</strong> 상수관로가 연결되지 않은 양구군 외곽 도서/산간지 부지에서 지하수로 에스프레소 머신 커피 추출을 할 경우 먹는 물 지하수 수질검사성적이 추가 제출되어야 합니다.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab Panel: 즉석판매제조가공업 -->
+                    <div class="tab-panel" id="panel-instant-store">
+                        <div class="panel-header-desc">
+                            <h4 data-i18n="tab3-panel-title">영업장에서 식품을 제조/가공하여 최종 소비자에게만 판매(소매)하는 가공업종입니다.</h4>
+                            <p data-i18n="tab3-panel-desc">작업장 내에서 떡, 김치, 반찬, 한과, 참기름 등을 직접 가공하여 현장 고객에게 팔거나 택배/인터넷 쇼핑몰로 최종 구매자에게 발송할 수 있습니다. 마트 납품 및 유통(도매) 행위는 불가능합니다.</p>
+                        </div>
+                        
+                        <div class="panel-content-grid">
+                            <div class="panel-docs-box">
+                                <h5 data-i18n="tab-docs-title">필요 구비서류 체크리스트</h5>
+                                <div class="doc-card-stack">
+                                    <div class="doc-card-mini clickable-doc-trigger" data-docname="식품영업신고서">
+                                        <div class="doc-chk-check">&#10003;</div>
+                                        <div class="doc-meta-wrap">
+                                            <h6><span data-i18n="doc-item-report">식품영업신고서</span> <button class="btn-text-action" data-i18n="btn-detail">[상세안내]</button></h6>
+                                            <p data-i18n="doc-item-report-desc">양구군 보건소 민원실 작성 접수 서식 (수수료: 28,000원)</p>
+                                        </div>
+                                    </div>
+                                    <div class="doc-card-mini clickable-doc-trigger" data-docname="제조방법설명서">
+                                        <div class="doc-chk-check">&#10003;</div>
+                                        <div class="doc-meta-wrap">
+                                            <h6><span data-i18n="doc-item-process">제조방법설명서</span> <button class="btn-text-action" data-i18n="btn-detail">[상세안내]</button></h6>
+                                            <p data-i18n="doc-item-process-desc">판매 예정인 식품의 품목 유형과 배합, 가공 단계를 기술하는 서식</p>
+                                        </div>
+                                    </div>
+                                    <div class="doc-card-mini clickable-doc-trigger" data-docname="건강진단결과서 (구 보건증)">
+                                        <div class="doc-chk-check">&#10003;</div>
+                                        <div class="doc-meta-wrap">
+                                            <h6><span data-i18n="doc-item-health">건강진단결과서 (구 보건증)</span> <button class="btn-text-action" data-i18n="btn-detail">[상세안내]</button></h6>
+                                            <p data-i18n="doc-item-health-desc">식품 제조자 전원 필수 보건증 지참</p>
+                                        </div>
+                                    </div>
+                                    <div class="doc-card-mini clickable-doc-trigger" data-docname="위생교육수료증">
+                                        <div class="doc-chk-check">&#10003;</div>
+                                        <div class="doc-meta-wrap">
+                                            <h6><span data-i18n="doc-item-hygiene">위생교육수료증</span> <button class="btn-text-action" data-i18n="btn-detail">[상세안내]</button></h6>
+                                            <p data-i18n="doc-item-hygiene-desc-instant"><strong>한국식품산업협회</strong> 즉석판매제조가공업 동영상 교육과정(8시간)</p>
+                                        </div>
+                                    </div>
+                                    <div class="doc-card-mini clickable-doc-trigger" data-docname="임대차계약서 사본">
+                                        <div class="doc-chk-check">&#10003;</div>
+                                        <div class="doc-meta-wrap">
+                                            <h6><span data-i18n="doc-item-lease">부동산 임대차계약서</span> <button class="btn-text-action" data-i18n="btn-detail">[상세안내]</button></h6>
+                                            <p data-i18n="doc-item-lease-desc">영업장소 확보 입증을 위한 점포 임대 계약 서류</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel-zoning-box">
+                                <h5 data-i18n="tab-zoning-title">즉석판매제조가공업 시설 및 조닝 허가 기준</h5>
+                                <ul class="zoning-points">
+                                    <li data-i18n="tab3-zoning-p1"><strong>건축물대장 용도:</strong> <strong>제1종 또는 제2종 근린생활시설, 판매시설</strong>에서 신고 수수됩니다.</li>
+                                    <li data-i18n="tab3-zoning-p2"><strong>조리실 구획 분리:</strong> 위생 교차 오염 방지를 위해 제품 가공실(조리실)과 소비자 방문 결제 대기 판매 영역이 확실히 구획(파티션, 격벽, 유리문 등) 처리되어 있어야 보건소 실사 검사가 가능합니다.</li>
+                                    <li data-i18n="tab3-zoning-p3"><strong>자가품질검사 의무:</strong> 제조/판매하는 식품 유형에 따라 <strong>9개월에 1회 이상</strong> 공인 식품검사기관에 검사를 의뢰하여 결과를 비치해 둘 의무가 있습니다.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab Panel: 식품제조가공업 -->
+                    <div class="tab-panel" id="panel-factory-store">
+                        <div class="panel-header-desc">
+                            <h4 data-i18n="tab4-panel-title">대량 기계 설비를 갖추고 마트, 온라인몰, 도매상 등에 B2B로 납품 및 유통이 가능한 정식 식품제조 공장입니다.</h4>
+                            <p data-i18n="tab4-panel-desc">유통 제한이 없는 반면 공장 등록 절차를 거쳐야 하며, 건축물 용도 규제가 매우 엄격합니다. 타 업체에 납품 유통하는 도매가 이에 해당됩니다.</p>
+                        </div>
+                        
+                        <div class="panel-content-grid">
+                            <div class="panel-docs-box">
+                                <h5 data-i18n="tab-docs-title">필요 구비서류 체크리스트</h5>
+                                <div class="doc-card-stack">
+                                    <div class="doc-card-mini clickable-doc-trigger" data-docname="식품영업등록신청서">
+                                        <div class="doc-chk-check">&#10003;</div>
+                                        <div class="doc-meta-wrap">
+                                            <h6><span data-i18n="doc-item-reg">식품영업등록신청서</span> <button class="btn-text-action" data-i18n="btn-detail">[상세안내]</button></h6>
+                                            <p data-i18n="doc-item-reg-desc">신고 서식이 아닌 **등록 법정 서식** 작성 제출 (수수료: 28,000원)</p>
+                                        </div>
+                                    </div>
+                                    <div class="doc-card-mini clickable-doc-trigger" data-docname="제조방법설명서">
+                                        <div class="doc-chk-check">&#10003;</div>
+                                        <div class="doc-meta-wrap">
+                                            <h6><span data-i18n="doc-item-process">제조방법설명서</span> <button class="btn-text-action" data-i18n="btn-detail">[상세안내]</button></h6>
+                                            <p data-i18n="doc-item-process-desc">원재료 성분 배합비율(%)과 전체 가공공정도를 치밀하게 표기한 문서</p>
+                                        </div>
+                                    </div>
+                                    <div class="doc-card-mini clickable-doc-trigger" data-docname="건강진단결과서 (구 보건증)">
+                                        <div class="doc-chk-check">&#10003;</div>
+                                        <div class="doc-meta-wrap">
+                                            <h6><span data-i18n="doc-item-health">건강진단결과서 (구 보건증)</span> <button class="btn-text-action" data-i18n="btn-detail">[상세안내]</button></h6>
+                                            <p data-i18n="doc-item-health-desc">식품 가공 생산라인 종사 근로자 전원의 보건증 보관 필수</p>
+                                        </div>
+                                    </div>
+                                    <div class="doc-card-mini clickable-doc-trigger" data-docname="위생교육수료증">
+                                        <div class="doc-chk-check">&#10003;</div>
+                                        <div class="doc-meta-wrap">
+                                            <h6><span data-i18n="doc-item-hygiene">위생교육수료증</span> <button class="btn-text-action" data-i18n="btn-detail">[상세안내]</button></h6>
+                                            <p data-i18n="doc-item-hygiene-desc-factory"><strong>한국식품산업협회</strong>의 신규 식품제조가공업 동영상 교육(8시간)</p>
+                                        </div>
+                                    </div>
+                                    <div class="doc-card-mini clickable-doc-trigger conditional" data-docname="품목제조보고서">
+                                        <div class="doc-chk-check font-orange">&#9888;</div>
+                                        <div class="doc-meta-wrap">
+                                            <h6><span data-i18n="doc-item-prod">품목제조보고서</span> <span class="tag-cond" data-i18n="tag-prod">생산시 필수</span> <button class="btn-text-action" data-i18n="btn-detail">[상세안내]</button></h6>
+                                            <p data-i18n="doc-item-prod-desc">영업등록 완료 후 제품 생산 시작 7일 이내 식품안전나라 온라인 전산 보고</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel-zoning-box">
+                                <h5 data-i18n="tab-zoning-title">식품제조가공업 공장 등록 허가 기준</h5>
+                                <ul class="zoning-points">
+                                    <li data-i18n="tab4-zoning-p1"><strong>건축물대장 용도:</strong> <strong>공장</strong> 또는 <strong>제조업소</strong> 용도만 가능합니다. 2종 근린생활시설(제조업소)은 총 바닥면적의 합이 500㎡(약 150평) 미만일 때만 이용 가능합니다.</li>
+                                    <li data-i18n="tab4-zoning-p2"><strong>용도지역 한계:</strong> 주거지역(전용 및 일반주거지역)에서는 식품제조가공업 개설이 불가능하며 상업, 준주거, 공업지역 매물 확보가 의무적입니다.</li>
+                                    <li data-i18n="tab4-zoning-p3"><strong>자가품질검사 주기 강화:</strong> 유형별 <strong>1~3개월에 1회 이상</strong> 정기 검사를 거쳐 그 결과성적표를 2년간 의무 보존해야 합니다.</li>
+                                </ul>
+                                
+                                <div class="callout-card alert">
+                                    <h6 data-i18n="tab4-tip-title">⚠️ 등록 실사 거절 요소 대비</h6>
+                                    <p data-i18n="tab4-tip-desc">"식품제조가공업은 영업등록 신청 시 보건소 담당 위생팀 공무원의 **현장 실사**가 무조건 발생합니다. 원료 창고, 배합/가공실, 내포장실, 외포장실, 근로자 탈의 및 위생전실이 완전히 독립 구획되어 있지 않으면 보완 및 지연 명령이 발생하므로 레이아웃 수립 시 보건소에 사전 자문을 받으세요."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Step-by-Step Procedure Timeline (영업신고 로드맵) -->
+        <section id="roadmap" class="roadmap-section scroll-offset">
+            <div class="container">
+                <div class="section-title-area">
+                    <span class="section-subtitle" data-i18n="road-subtitle">ROADMAP</span>
+                    <h3 class="section-title" data-i18n="road-title">원스톱 식품영업신고 6단계 절차</h3>
+                    <p class="section-desc" data-i18n="road-desc">첫 아이디어 기획부터 영업신고증 수령까지 거쳐야 하는 명확한 행정 타임라인을 안내해 드립니다.</p>
+                </div>
+
+                <div class="roadmap-timeline">
+                    <!-- Step 1 -->
+                    <div class="timeline-step">
+                        <div class="step-num-node">01</div>
+                        <div class="step-card">
+                            <span class="step-badge" data-i18n="road-step1-tag">1단계</span>
+                            <h4 data-i18n="road-step1-title">보건증(건강진단결과서) 발급</h4>
+                            <p data-i18n="road-step1-desc">식품 취급자의 필수 요건입니다. 양구군 보건소 또는 가까운 보건기관에서 장티푸스, 폐결핵 검사를 받으시며, 발급까지 **영업일 기준 5일**이 소요됩니다.</p>
+                            <span class="step-cost" data-i18n="road-step1-cost">비용: 3,000원 내외</span>
+                        </div>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="timeline-step">
+                        <div class="step-num-node">02</div>
+                        <div class="step-card">
+                            <span class="step-badge" data-i18n="road-step2-tag">2단계</span>
+                            <h4 data-i18n="road-step2-title">법정 위생교육 이수</h4>
+                            <p data-i18n="road-step2-desc">업종에 맞는 위생 교육기관 사이트에 가입하여 신규 영업주 강의(6~8시간)를 완료하고 수료증을 출력해 둡니다.</p>
+                            <span class="step-cost" data-i18n="road-step2-cost">비용: 약 30,000원 ~ 35,000원</span>
+                        </div>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="timeline-step">
+                        <div class="step-num-node">03</div>
+                        <div class="step-card">
+                            <span class="step-badge" data-i18n="road-step3-tag">3단계</span>
+                            <h4 data-i18n="road-step3-title">임대차 계약 및 건축물대장 검토</h4>
+                            <p data-i18n="road-step3-desc">상가 건물의 대장 용도(근생/제조업 등) 및 위반건축물 등재 여부를 군 보건소 위생 담당자와 가계약 전에 미리 연동 조율합니다.</p>
+                            <span class="step-cost" data-i18n="road-step3-cost">비용: 부동산 중개료 등</span>
+                        </div>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="timeline-step">
+                        <div class="step-num-node">04</div>
+                        <div class="step-card">
+                            <span class="step-badge" data-i18n="road-step4-tag">4단계</span>
+                            <h4 data-i18n="road-step4-title">소방필증 및 가스완성검사 (해당 시)</h4>
+                            <p data-i18n="road-step4-desc">지하층/고층 식당은 소방서 소방완비증명서를 획득하고, LPG 가스 사용처는 가스안전공사 완성검사를 통과해야 합니다. 지하수 사용 시 수질성적서가 요구됩니다.</p>
+                            <span class="step-cost" data-i18n="road-step4-cost">비용: 설비 시공비 및 검사료</span>
+                        </div>
+                    </div>
+                    <!-- Step 5 -->
+                    <div class="timeline-step">
+                        <div class="step-num-node">05</div>
+                        <div class="step-card">
+                            <span class="step-badge" data-i18n="road-step5-tag">5단계</span>
+                            <h4 data-i18n="road-step5-title">보건소 방문 및 영업신고 접수</h4>
+                            <p data-i18n="road-step5-desc">양구군 보건소 1층 위생담당에 방문하여 구비한 서류 묶음 일체를 접수합니다. 서류 적법성과 신원 조회가 현장에서 이루어집니다.</p>
+                            <span class="step-cost" data-i18n="road-step5-cost">비용: 수수료 28,000원</span>
+                        </div>
+                    </div>
+                    <!-- Step 6 -->
+                    <div class="timeline-step">
+                        <div class="step-num-node">06</div>
+                        <div class="step-card">
+                            <span class="step-badge" data-i18n="road-step6-tag">6단계</span>
+                            <h4 data-i18n="road-step6-title">등록면허세 납부 및 신고증 수령</h4>
+                            <p data-i18n="road-step6-desc">서류가 적격할 경우 면허세 고지서를 세무 부서에 즉시 납부하면, 최종 영업신고증 정본을 즉시(3시간 이내) 현장 발급받으실 수 있습니다.</p>
+                            <span class="step-cost" data-i18n="road-step6-cost">비용: 면허세 1.8만 ~ 6.7만 원</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Document Download Center (서식 다운로드 센터) -->
+        <section id="downloads" class="download-section scroll-offset">
+            <div class="container">
+                <div class="section-title-area">
+                    <span class="section-subtitle" data-i18n="down-subtitle">DOWNLOAD CENTER</span>
+                    <h3 class="section-title" data-i18n="down-title">관공서 인허가 표준 서식 자료실</h3>
+                    <p class="section-desc" data-i18n="down-desc">영업신고에 필요한 양식들을 보건소에 가기 전에 미리 작성하실 수 있도록 제공해 드립니다. 실시간 검색을 이용해 보세요.</p>
+                </div>
+
+                <!-- Live Search Bar -->
+                <div class="download-search-wrapper">
+                    <div class="live-search-box">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="search-icon-svg"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                        <input type="text" id="live-search-input" placeholder="원하는 서식 이름을 입력해 보세요 (예: 신고서, 제조방법설명서, 위임장)..." aria-label="다운로드 서식 실시간 검색" data-i18n-placeholder="down-search-placeholder">
+                        <button class="clear-search-btn" id="clear-search-btn" aria-label="검색어 지우기">&times;</button>
+                    </div>
+                </div>
+
+                <!-- Downloads Grid -->
+                <div class="download-grid" id="download-cards-container">
+                    
+                    <!-- Card 1 -->
+                    <div class="download-card" data-tags="식품영업신고서 신고서 일반음식점 휴게음식점 즉석판매">
+                        <div class="card-file-icon hwp">HWP</div>
+                        <div class="card-meta">
+                            <span class="file-tag green" data-i18n="down-tag1">인허가 서식</span>
+                            <h4 data-i18n="down-card1-title">식품영업신고서</h4>
+                            <p data-i18n="down-card1-desc">일반음식점, 휴게음식점, 즉석판매제조가공업 영업신고 시 제출하는 공통 표준 양식입니다.</p>
+                            <div class="card-footer-info">
+                                <span data-i18n="down-size1">크기: 45 KB</span>
+                                <button class="btn btn-sm btn-outline mock-download-btn" data-file="식품영업신고서.hwp" data-i18n="down-btn-text">다운로드</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="download-card" data-tags="식품영업등록신청서 등록신청서 식품제조가공업">
+                        <div class="card-file-icon hwp">HWP</div>
+                        <div class="card-meta">
+                            <span class="file-tag orange" data-i18n="down-tag2">등록 서식</span>
+                            <h4 data-i18n="down-card2-title">식품영업등록신청서</h4>
+                            <p data-i18n="down-card2-desc">대량 납품을 전문으로 하는 식품제조가공업 영업등록을 진행할 때 작성하는 법정 서식입니다.</p>
+                            <div class="card-footer-info">
+                                <span data-i18n="down-size2">크기: 42 KB</span>
+                                <button class="btn btn-sm btn-outline mock-download-btn" data-file="식품영업등록신청서.hwp" data-i18n="down-btn-text">다운로드</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="download-card" data-tags="제조방법설명서 즉석판매제조가공업 식품제조가공업 제조방법">
+                        <div class="card-file-icon hwp">HWP</div>
+                        <div class="card-meta">
+                            <span class="file-tag blue" data-i18n="down-tag3">제조업 전용</span>
+                            <h4 data-i18n="down-card3-title">제조방법설명서 (식품제조/즉석판매)</h4>
+                            <p data-i18n="down-card3-desc">생산할 식품의 유형별 명칭, 원료명, 대략적인 제조 공정 순서표가 포함된 작성 예문 양식입니다.</p>
+                            <div class="card-footer-info">
+                                <span data-i18n="down-size3">크기: 38 KB</span>
+                                <button class="btn btn-sm btn-outline mock-download-btn" data-file="제조방법설명서.hwp" data-i18n="down-btn-text">다운로드</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="download-card" data-tags="위임장 대리인 신청 대리인위임장">
+                        <div class="card-file-icon docx">DOCX</div>
+                        <div class="card-meta">
+                            <span class="file-tag gray" data-i18n="down-tag4">대리 신청용</span>
+                            <h4 data-i18n="down-card4-title">대리인 위임장 양식</h4>
+                            <p data-i18n="down-card4-desc">대표자 본인이 직접 보건소에 방문하지 못하고 직원이 대리로 신청서를 대리 접수할 때 지참해야 할 위임장 폼입니다.</p>
+                            <div class="card-footer-info">
+                                <span data-i18n="down-size4">크기: 18 KB</span>
+                                <button class="btn btn-sm btn-outline mock-download-btn" data-file="대리인위임장.docx" data-i18n="down-btn-text">다운로드</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="download-card" data-tags="지하수 수질검사성적서 성적서 수질검사 물검사">
+                        <div class="card-file-icon pdf">PDF</div>
+                        <div class="card-meta">
+                            <span class="file-tag red" data-i18n="down-tag5">수질 관리</span>
+                            <h4 data-i18n="down-card5-title">지하수 수질검사 신청서</h4>
+                            <p data-i18n="down-card5-desc">상수도가 아닌 지하수를 조리용수로 사용 시 먹는 물 공인검사기관에 검사를 요청하는 법적 절차 안내 문서입니다.</p>
+                            <div class="card-footer-info">
+                                <span data-i18n="down-size5">크기: 120 KB</span>
+                                <button class="btn btn-sm btn-outline mock-download-btn" data-file="지하수수질검사신청서.pdf" data-i18n="down-btn-text">다운로드</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="download-card" data-tags="영업자 지위승계 지위승계신청서 명의변경 기존가게 양도양수">
+                        <div class="card-file-icon hwp">HWP</div>
+                        <div class="card-meta">
+                            <span class="file-tag teal" data-i18n="down-tag6">명의 승계</span>
+                            <h4 data-i18n="down-card6-title">영업자 지위승계 신고서</h4>
+                            <p data-i18n="down-card6-desc">기존에 운영되던 식품영업권을 다른 사람에게 양도양수(명의변경)할 때 작성하는 양식으로 포괄 승계 시 사용합니다.</p>
+                            <div class="card-footer-info">
+                                <span data-i18n="down-size6">크기: 40 KB</span>
+                                <button class="btn btn-sm btn-outline mock-download-btn" data-file="영업자지위승계신고서.hwp" data-i18n="down-btn-text">다운로드</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="no-results-msg" id="search-no-results" style="display: none;" data-i18n="down-no-results">
+                    검색 결과와 일치하는 서식이 존재하지 않습니다. 다른 검색어로 다시 검색해 주세요.
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: FAQ Section (자주 묻는 질문) -->
+        <section id="faq" class="faq-section scroll-offset">
+            <div class="container">
+                <div class="section-title-area">
+                    <span class="section-subtitle" data-i18n="faq-subtitle">FAQ</span>
+                    <h3 class="section-title" data-i18n="faq-title">자주 질문하시는 민원 팩트 체크</h3>
+                    <p class="section-desc" data-i18n="faq-desc">식품 관련 인허가 준비 과정에서 민원인분들이 가장 많이 질문하시는 내용을 모아 명쾌하게 해답해 드립니다.</p>
+                </div>
+
+                <div class="faq-accordion-container">
+                    <!-- Q1 -->
+                    <div class="faq-item">
+                        <button type="button" class="faq-question">
+                            <span data-i18n="faq-q1">Q. 식품제조가공업과 즉석판매제조가공업의 결정적인 유통상 차이점은 무엇인가요?</span>
+                            <span class="accordion-arrow">&or;</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p data-i18n="faq-a1-p1">가장 결정적인 차이는 <strong>B2B 납품(도매 유통) 허용 여부</strong>입니다.</p>
+                            <ul>
+                                <li data-i18n="faq-a1-li1"><strong>즉석판매제조가공업:</strong> 제조한 식품을 최종 소비자(일반 개인)에게만 직접 전달할 수 있습니다. 인터넷 쇼핑몰(네이버 스마트스토어 등)이나 우편 택배 발송은 최종 소비자를 향하므로 적법하지만, 다른 편의점이나 일반 카페, 반찬 유통업체 등으로 납품하여 재판매하게 하는 행위는 전면 금지됩니다.</li>
+                                <li data-i18n="faq-a1-li2"><strong>식품제조가공업:</strong> 생산된 품목을 대형마트, 일반 매장, 학교 급식소 등 B2B 유통 채널에 제한 없이 유통 및 도매 납품할 수 있습니다. 단, 그에 걸맞게 공장/제조업소 용도의 전용 작업장을 구축해야 하고 시설 기준과 자가품질검사가 대폭 까다로워집니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="faq-item">
+                        <button type="button" class="faq-question">
+                            <span data-i18n="faq-q2">Q. 상가 매장의 건축물 용도가 맞지 않으면 어떤 문제가 발생하나요?</span>
+                            <span class="accordion-arrow">&or;</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p data-i18n="faq-a2-p1">건물 임대 계약 후 잔금까지 치렀더라도, 건축물 용도가 맞지 않으면 구청에서 <strong>영업신고증 발급을 즉각 반려</strong>합니다.</p>
+                            <ul>
+                                <li data-i18n="faq-a2-li1">일반음식점을 영업하기 위해서는 반드시 건축물대장상 건물의 용도가 <strong>'제2종 근린생활시설(일반음식점)'</strong>으로 등재되어 있어야 합니다.</li>
+                                <li data-i18n="faq-a2-li2">휴게음식점은 <strong>'제1종 근린생활시설(휴게음식점)'</strong> 혹은 <strong>'제2종 근린생활시설(휴게음식점)'</strong>에서 가능합니다.</li>
+                                <li data-i18n="faq-a2-li3">기존 점포 용도가 판매점, 주택, 사무실 등으로 되어 있다면 소유주(건물주)의 동의를 구해 구청에 건축물대장 기재사항 변경이나 표시 변경 허가(설계사 사무소 의뢰 필요)를 받아 승인을 완료한 후에 비로소 위생 영업 신고가 가능합니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="faq-item">
+                        <button type="button" class="faq-question">
+                            <span data-i18n="faq-q3">Q. 보건증(건강진단결과서) 유효기간과 검사 항목은 어떻게 되나요?</span>
+                            <span class="accordion-arrow">&or;</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p data-i18n="faq-a3-p1">식품 취급 영업소의 보건증 유효기간은 <strong>발급일(판정일) 기준 1년</strong>입니다.</p>
+                            <ul>
+                                <li data-i18n="faq-a3-li1"><strong>필수 검사 항목:</strong> 폐결핵(흉부 X선 촬영), 장티푸스(분변 검사), 전염성 피부질환(한센병 등 의사 문진).</li>
+                                <li data-i18n="faq-a3-li2">매년 만료일 이전에 보건소나 내과 병원에 재방문하여 갱신 검사를 진행해야 하며, 검사를 누락한 경우 영업주와 종업원 모두에게 식품위생법 미갱신에 따른 과태료가 인당 부과되므로 철저한 일정이 요구됩니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Q4 -->
+                    <div class="faq-item">
+                        <button type="button" class="faq-question">
+                            <span data-i18n="faq-q4">Q. 일반음식점과 휴게음식점의 주류 판매 차이는 구체적으로 어떻게 되나요?</span>
+                            <span class="accordion-arrow">&or;</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p data-i18n="faq-a4-p1">음식 조리 판매 영역에서 <strong>주류의 종류와 허용 행위</strong>가 다릅니다.</p>
+                            <ul>
+                                <li data-i18n="faq-a4-li1"><strong>일반음식점:</strong> 식사와 주류(맥주, 소주, 와인, 막걸리 등)를 함께 파는 것이 전면 허용됩니다. 단, 손님이 일어서서 춤을 추거나 노래를 부르게 하는 유흥주점식 행위는 일반음식점 규정 위반이 됩니다.</li>
+                                <li data-i18n="faq-a4-li2"><strong>휴게음식점:</strong> 어떠한 술(주류)도 판매하거나 매장 내에서 마시게 할 수 없습니다. 카페, 제과점, 도넛숍, 김밥전문점 등은 휴게음식점이며, 아무리 저녁 시간이라도 맥주 한 캔조차 제공할 수 없습니다. 논알코올 맥주나 0.0% 표시 음료의 판매는 허용됩니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Q5 -->
+                    <div class="faq-item">
+                        <button type="button" class="faq-question">
+                            <span data-i18n="faq-q5">Q. 기존에 음식점을 하던 자리를 그대로 인수하는 경우의 서류는 어떻게 되나요?</span>
+                            <span class="accordion-arrow">&or;</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p data-i18n="faq-a5-p1">신규 신고 대신 <strong>'영업자 지위승계 신고'</strong>를 활용하시는 것이 유리합니다.</p>
+                            <ul>
+                                <li data-i18n="faq-a5-li1">기존 점포가 폐업 신청을 하기 전에 양도인(이전 사장님)과 양수인(신규 사장님)이 <strong>함께 양구군 보건소 위생계에 방문</strong>하여 영업자 지위승계신고서를 접수합니다.</li>
+                                <li data-i18n="faq-a5-li2"><strong>양도인 지참물:</strong> 영업신고증 원본, 신분증.</li>
+                                <li data-i18n="faq-a5-li3"><strong>양수인 지참물:</strong> 신분증, 위생교육 수료증(사전 취득), 보건증(유효한 결과서).</li>
+                                <li data-i18n="faq-a5-li4">이 경우 소방완비증명서 승계, 지하 가스배관 검사 등을 재차 거치지 않아 창업 준비 기간을 비약적으로 줄일 수 있습니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Floating Speed Dial Widgets -->
+    <div class="floating-widgets">
+        <button class="widget-btn main-widget" id="main-widget-btn" aria-label="빠른 메뉴 열기">
+            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5" fill="none"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+        </button>
+        <div class="widget-sub-menu" id="widget-sub-menu">
+            <a href="tel:0334802830" class="widget-btn-sub" title="위생팀 전화 연결">
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </a>
+            <button class="widget-btn-sub" id="widget-btn-location" title="보건소 오시는 길">
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </button>
+            <a href="#diagnostic" class="widget-btn-sub" title="자가진단으로 바로가기">
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+            </a>
+        </div>
+    </div>
+
+    <!-- Contact & Map Modal Dialog -->
+    <div class="modal-overlay" id="location-modal">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <h3 id="loc-modal-title">📍 양구군보건소 위치 및 오시는 길</h3>
+                <button class="modal-close-btn" id="modal-close-btn" aria-label="창 닫기">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-map-frame">
+                    <!-- Yanggu vector map simulation -->
+                    <div class="visual-map-placeholder">
+                        <div class="map-pointer">
+                            <span class="pointer-ping"></span>
+                            <span class="pointer-dot"></span>
+                        </div>
+                        <div class="map-info-bubble">
+                            <strong>양구군보건소 (위생계)</strong>
+                            <p>강원특별자치도 양구군 양구읍 관공서로 42</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-text-details">
+                    <h5 id="loc-modal-bus-title">🚌 대중교통 및 도로 안내</h5>
+                    <ul>
+                        <li id="loc-modal-bus-p1"><strong>시외버스:</strong> **양구시외버스터미널** 하차 후 양구군청 방향 도보 15분 (약 900m)</li>
+                        <li id="loc-modal-bus-p2"><strong>차량 주차:</strong> 보건소 및 군청 주변 무료 공영 주차장 완비</li>
+                    </ul>
+                    <h5 id="loc-modal-tel-title">📞 주요 문의 전화</h5>
+                    <ul class="call-lists">
+                        <li><strong data-i18n="loc-tel1">보건소 대표 위생 행정:</strong> 033-480-2830</li>
+                        <li><strong data-i18n="loc-tel2">예방접종 / 보건증 담당:</strong> 033-480-2565</li>
+                        <li><strong data-i18n="loc-tel3">양구군청 종합민원실:</strong> 033-480-2214</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="modal-ok-btn" data-i18n="btn-ok">확인</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Document Detail Modal -->
+    <div class="modal-overlay" id="document-detail-modal">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <h3 id="doc-modal-title">📄 서류 상세 안내</h3>
+                <button class="modal-close-btn" id="doc-modal-close-btn" aria-label="창 닫기">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="doc-detail-content">
+                    <div class="doc-detail-row">
+                        <h5 id="doc-detail-lbl-desc">📋 서류 개요</h5>
+                        <p id="doc-modal-desc"></p>
+                    </div>
+                    <div class="doc-detail-row">
+                        <h5 id="doc-detail-lbl-prep">🔍 발급 절차 및 준비물</h5>
+                        <p id="doc-modal-prep"></p>
+                    </div>
+                    <div class="doc-detail-row">
+                        <h5 id="doc-detail-lbl-fee">💰 수수료 / 소요 비용</h5>
+                        <p id="doc-modal-fee"></p>
+                    </div>
+                    <div class="doc-detail-row">
+                        <h5 id="doc-detail-lbl-location">📍 발급 및 검진 기관</h5>
+                        <p id="doc-modal-location"></p>
+                    </div>
+                    <div class="doc-detail-row">
+                        <h5 id="doc-detail-lbl-duration">⏱️ 발급 소요 시간</h5>
+                        <p id="doc-modal-duration"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="doc-modal-ok-btn" data-i18n="btn-ok">확인</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand-info">
+                <div class="footer-logo">
+                    <span class="footer-logo-cross">+</span>
+                    <h4 data-i18n="footer-brand">양구군보건소</h4>
+                </div>
+                <p class="footer-slogan" data-i18n="footer-slogan">깨끗한 자연, 군민이 화합하는 강원 양구군</p>
+                <p class="footer-address" data-i18n="footer-addr">강원특별자치도 양구군 양구읍 관공서로 42 (양구군보건소 위생계)</p>
+                <p class="footer-tel" data-i18n="footer-phone">위생과 대표문의 : 033-480-2830 | 팩스 : 033-480-2525</p>
+            </div>
+            
+            <div class="footer-links-group">
+                <h5 data-i18n="footer-links-title">바로가기 서비스</h5>
+                <ul class="footer-menu">
+                    <li><a href="https://www.foodsafetykorea.go.kr" target="_blank" rel="noopener noreferrer" data-i18n="footer-lnk1">식품안전나라 사이트</a></li>
+                    <li><a href="https://www.gov.kr" target="_blank" rel="noopener noreferrer" data-i18n="footer-lnk2">정부24 민원접수</a></li>
+                    <li><a href="https://www.yanggu.go.kr/" target="_blank" rel="noopener noreferrer" data-i18n="footer-lnk3">양구군청 홈페이지</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-disclaimer-card">
+                <h5 data-i18n="footer-disclaimer-title">⚠️ 법적 고지사항 (Disclaimer)</h5>
+                <p data-i18n="footer-disclaimer-desc">본 웹페이지의 자가진단 및 상세 가이드 정보는 양구군 식품 인허가 예비 창업주의 민원 편의를 위해 행정 조례를 가독성 높게 정리한 모의 안내서입니다. 점포 보수 공사 및 상가 계약 잔금 처리 전, 반드시 **양구군 보건소 위생계 인허가 담당 실무자와 사전 대면 상담**을 거치셔야 돌발적인 법적 피해를 방지할 수 있습니다.</p>
+            </div>
+        </div>
+        
+        <div class="footer-copyright-bar">
+            <div class="container copyright-container">
+                <p class="copyright-txt" data-i18n="footer-copyright">&copy; 2026 Yanggu-gun Public Health Center. All Rights Reserved. Model page designed for startup helper.</p>
+                <div class="footer-logos">
+                    <span class="webaccess-badge" data-i18n="footer-wa">웹 접근성 인증 마크 우회</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Dialog Toast Alert Container -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- Script File -->
+    <script src="script.js"></script>
+</body>
+</html>
+
