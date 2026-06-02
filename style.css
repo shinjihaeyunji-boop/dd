@@ -2473,6 +2473,14 @@ body.dark-mode .main-footer {
    Responsive Media Queries (High Fidelity Optimization)
    ========================================================================== */
 @media (max-width: 1100px) {
+    .main-nav, .header-search {
+        display: none;
+    }
+    
+    .mobile-menu-btn {
+        display: flex;
+    }
+
     .hero-container {
         flex-direction: column;
         text-align: center;
@@ -2511,14 +2519,6 @@ body.dark-mode .main-footer {
 @media (max-width: 768px) {
     html {
         font-size: 15px;
-    }
-    
-    .main-nav, .header-search {
-        display: none;
-    }
-    
-    .mobile-menu-btn {
-        display: flex;
     }
     
     .hero-content h2 {

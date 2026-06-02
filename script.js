@@ -3,6 +3,15 @@
  * Interactive Client-side Scripting with Multi-language Translation (Pure JS)
  */
 
+// Register Service Worker for PWA support
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js')
+            .then(reg => console.log('[PWA] Service Worker Registered', reg))
+            .catch(err => console.error('[PWA] Service Worker Registration Failed', err));
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     let currentLang = localStorage.getItem('lang') || 'ko';
 
