@@ -3022,3 +3022,95 @@ body.dark-mode .btn-doc-detail-trigger:hover {
     background-color: var(--primary-color);
     color: white;
 }
+
+/* ==========================================================================
+   Notice Popup Style
+   ========================================================================== */
+#notice-popup-modal {
+    align-items: center;
+    justify-content: center;
+    z-index: 1200; /* Ensure it is on top of normal modal overlays */
+}
+
+.notice-dialog {
+    max-width: 480px;
+    width: 90%;
+    background: var(--card-bg);
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(13, 77, 51, 0.15);
+    overflow: hidden;
+    animation: zoomIn 0.3s ease-out;
+}
+
+body.dark-mode .notice-dialog {
+    border: 1px solid rgba(36, 48, 60, 0.7);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.notice-popup-content {
+    text-align: center;
+    padding: 15px 0;
+}
+
+.notice-popup-text {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.notice-popup-subtext {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+.notice-phone-link {
+    color: var(--primary-color);
+    text-decoration: underline;
+    font-weight: 700;
+    margin-left: 4px;
+    transition: var(--transition-smooth);
+}
+
+.notice-phone-link:hover {
+    color: var(--primary-hover);
+}
+
+.notice-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    background-color: var(--bg-light);
+    border-top: 1px solid var(--border-color);
+}
+
+body.dark-mode .notice-footer {
+    background-color: #151d24;
+}
+
+.today-close-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    user-select: none;
+}
+
+.today-close-label input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--primary-color);
+    cursor: pointer;
+}
+

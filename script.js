@@ -1374,7 +1374,12 @@ document.addEventListener('DOMContentLoaded', () => {
             "footer-disclaimer-title": "⚠️ 법적 고지사항 (Disclaimer)",
             "footer-disclaimer-desc": "본 웹페이지의 자가진단 및 상세 가이드 정보는 양구군 식품 인허가 예비 창업주의 민원 편의를 위해 행정 조례를 가독성 높게 정리한 모의 안내서입니다. 점포 보수 공사 및 상가 계약 잔금 처리 전, 반드시 **양구군 보건소 위생관리팀 인허가 담당 실무자와 사전 대면 상담**을 거치셔야 돌발적인 법적 피해를 방지할 수 있습니다.",
             "footer-copyright": "&copy; 2026 Yanggu-gun Public Health Center. All Rights Reserved. Model page designed for startup helper.",
-            "footer-wa": "웹 접근성 인증 마크 우회"
+            "footer-wa": "웹 접근성 인증 마크 우회",
+            "popup-title": "📢 중요 공지사항",
+            "popup-text": "영업신고 전 담당자 유선통화 후 방문",
+            "popup-subtext": "양구군보건소 위생관리팀 <a href=\"tel:0334802723\" class=\"notice-phone-link\">033-480-2723</a>",
+            "popup-close-today": "오늘 하루 보지 않기",
+            "popup-close": "닫기"
         },
         en: {
             "page-title": "Yanggu-gun Health Center | Food Business Declaration One-stop Center",
@@ -1575,7 +1580,12 @@ document.addEventListener('DOMContentLoaded', () => {
             "footer-disclaimer-title": "⚠️ Disclaimer Notice",
             "footer-disclaimer-desc": "The self-diagnostic checks and guides on this page are compiled from Yanggu building bylaws for convenience. Before signing lease contracts or beginning store renovations, please consult directly with the Yanggu Health Center Hygiene Team to prevent any legal or financial issues.",
             "footer-copyright": "&copy; 2026 Yanggu-gun Public Health Center. All Rights Reserved. Model page designed for startup helper.",
-            "footer-wa": "Web Accessibility Waiver"
+            "footer-wa": "Web Accessibility Waiver",
+            "popup-title": "📢 Important Notice",
+            "popup-text": "Please make a phone call to the officer before visiting for declaration.",
+            "popup-subtext": "Hygiene Team, Yanggu Health Center: <a href=\"tel:0334802723\" class=\"notice-phone-link\">+82-33-480-2723</a>",
+            "popup-close-today": "Do not show again today",
+            "popup-close": "Close"
         }
     };
 
@@ -1623,6 +1633,33 @@ document.addEventListener('DOMContentLoaded', () => {
         if (wizardState.step === 'result') {
             generateDiagnosticResult();
         }
+    }
+
+    /* ==========================================================================
+       Notice Popup Control
+       ========================================================================== */
+    const noticeModal = document.getElementById('notice-popup-modal');
+    const noticeCloseBtn = document.getElementById('notice-close-btn');
+    const todayCloseCheckbox = document.getElementById('today-close-checkbox');
+
+    if (noticeModal && noticeCloseBtn && todayCloseCheckbox) {
+        const hideNoticeUntil = localStorage.getItem('hideNoticeUntil');
+        const now = new Date().getTime();
+
+        if (!hideNoticeUntil || now > parseInt(hideNoticeUntil, 10)) {
+            noticeModal.classList.add('active');
+        } else {
+            noticeModal.classList.remove('active');
+        }
+
+        noticeCloseBtn.addEventListener('click', () => {
+            if (todayCloseCheckbox.checked) {
+                // Calculate timestamp for 24 hours later (today close check)
+                const expiryTime = new Date().getTime() + (24 * 60 * 60 * 1000);
+                localStorage.setItem('hideNoticeUntil', expiryTime);
+            }
+            noticeModal.classList.remove('active');
+        });
     }
 });
 
